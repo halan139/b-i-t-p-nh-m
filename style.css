@@ -1,0 +1,171 @@
+ /* Reset margins and paddings */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #d32f2f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.menu-banner {
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu-banner h1 {
+    font-size: 36px;
+}
+
+.menu-items {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for category filters */
+.category-filters {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.category-filters button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.category-filters button:hover {
+    background-color: #e91e63;
+}
+
+.category-filters button.active {
+    background-color: #ff9800;
+}
+
+/* Style for menu items */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-name {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.price {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer .footer-column {
+    flex: 1;
+    padding: 10px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+footer p, footer ul {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons img {
+    width: 30px;
+    margin: 0 5px;
+}

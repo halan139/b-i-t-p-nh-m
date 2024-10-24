@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixue Menu</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="./ảnh/logo_mixue.webp" alt="Mixue Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Menu Mixue</a></li>
+                <li><a href="#">Mix News</a></li>
+                <li><a href="#">Đối Tác</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="menu-banner">
+        <h1>Menu Mixue</h1>
+    </section>
+
+    <!-- Category Filters -->
+    <div class="category-filters">
+        <button onclick="filterMenu('Kem và Sundae')">Kem và Sundae</button>
+        <button onclick="filterMenu('Trà hoa quả')">Trà hoa quả</button>
+        <button onclick="filterMenu('Trà sữa')">Trà sữa</button>
+        <button onclick="filterMenu('Đồ ăn vặt')">Đồ ăn vặt</button>
+        <button onclick="filterMenu('Đồ lưu niệm')">Đồ lưu niệm</button>
+    </div>
+
+    <!-- Menu Items Section -->
+    <section class="menu-items">
+        <div class="menu-grid" id="menu-grid">
+            <div class="menu-item" data-category="Kem và Sundae">
+                <img src="hong-tra-kem.png" alt="Hồng Trà Kem">
+                <p class="menu-name">Hồng Trà Kem</p>
+                <p class="price">25k</p>
+            </div>
+            <div class="menu-item" data-category="Kem và Sundae">
+                <img src="kem-cam.png" alt="Kem Cam Lốc Xoáy">
+                <p class="menu-name">Kem Cam Lốc Xoáy</p>
+                <p class="price">30k</p>
+            </div>
+            <div class="menu-item" data-category="Kem và Sundae">
+                <img src="kem-oc.png" alt="Kem ốc">
+                <p class="menu-name">Kem ốc</p>
+                <p class="price">20k</p>
+            </div>
+            <div class="menu-item" data-category="Trà hoa quả">
+                <img src="sua-kem-luc-xoay.png" alt="Sữa Kem Lốc Xoáy">
+                <p class="menu-name">Sữa Kem Lốc Xoáy</p>
+                <p class="price">35k</p>
+            </div>
+            <!-- Add more items here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Mixue</h3>
+                <p>Địa chỉ: số 159 phố Giảng Võ, Phường Cát Linh, Quận Ðống Ða, Thành phố Hà Nội, Việt Nam</p>
+                <p>Email: liuquanjin@zzmxbc.com </p>
+            </div>
+            <div class="footer-column">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">Kem và Sundae</a></li>
+                    <li><a href="#">Trà hoa quả</a></li>
+                    <li><a href="#">Trà sữa</a></li>
+                    <li><a href="#">Đồ ăn vặt</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Về chúng tôi</h3>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Menu Mixue</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </div>
+        </div>
+        <div class="social-icons">
+            <img src="facebook.png" alt="Facebook">
+            <img src="instagram.png" alt="Instagram">
+            <img src="twitter.png" alt="Twitter">
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Filter menu items by category
+        function filterMenu(category) {
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                if (item.getAttribute('data-category') === category || category === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Highlight the active button
+            const buttons = document.querySelectorAll('.category-filters button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
